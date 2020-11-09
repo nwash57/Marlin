@@ -499,9 +499,10 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp  22.20
-    #define DEFAULT_Ki   1.08
-    #define DEFAULT_Kd 114.00
+    // values from PID autotune with Steel 0.4mm hotend
+    #define DEFAULT_Kp 28.63
+    #define DEFAULT_Ki 2.57
+    #define DEFAULT_Kd 79.75
   #endif
 #endif // PIDTEMP
 
@@ -1123,7 +1124,7 @@
 
 // The size of the print bed
 #define X_BED_SIZE 220
-#define Y_BED_SIZE 205
+#define Y_BED_SIZE 200
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -1313,8 +1314,8 @@
 
   //#define MESH_EDIT_GFX_OVERLAY   // Display a graphics overlay while editing the mesh
 
-  #define MESH_INSET 10              // Set Mesh bounds as an inset region of the bed
-  #define GRID_MAX_POINTS_X 3      // Don't use more than 15 points per axis, implementation limited.
+  #define MESH_INSET 1              // Set Mesh bounds as an inset region of the bed
+  #define GRID_MAX_POINTS_X 6      // Don't use more than 15 points per axis, implementation limited.
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   #define UBL_MESH_EDIT_MOVES_Z     // Sophisticated users prefer no movement of nozzle
